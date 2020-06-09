@@ -1,0 +1,33 @@
+movi r5 89
+movi r0
+50
+movs r0
+load r1
+
+movs r1
+subi 89
+jmpdm
+exit
+movi r3
+1
+movi r4
+0
+loop:
+movs r3
+movd r5
+add r4
+
+movd r3
+movs r5
+movd r4
+movs r1
+movd r8
+sub r3
+jmpdp
+exit
+
+jmpdu loop
+
+exit:
+stop
+

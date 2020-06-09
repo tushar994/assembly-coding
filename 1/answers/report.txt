@@ -1,0 +1,49 @@
+FOR THE FIRST QUESTION
+
+we need to find the greatest fibonacci number less than the given input. 
+now, we know that the maximum number that can be stored is less than 144 and greater than 89.
+so, if a number between 89 and 144 (inclusive) is given, then we must output 89.
+we have to make a separate case for this, as the algorithm we use for the general case will not work for this.Why this is so will be explained later.
+so, we check if the input if greater than or equal to 89, if so, then r5 is given 89 and the program is ended.
+if the input is less than 89, then the following is done
+r1 is given 1, r2 is given 0;
+r3 stores r1.
+r1 is given the value r1 + r2
+r2 is given the value of r3.
+this is constantly done until r1 is greater than input.
+once r1 is greater than input, r2 is stored at r5 and the program ends
+
+if this were used for the case where the input is greater than 89,
+r1 would reach 89 and r2 would reach 55.
+then r1 would become 89 + 55, but this is greater than can be stored, so an overflow occurs, making r1 negative.
+so when we compare the input to r1, we get that r1 is not greater than the input, which is wrong.
+
+This is the algorithm for the first one.
+
+question 2
+
+in this we have to find the gcd of two numbers.
+we will do this using the euclidian algorithm
+so, we will store the inputs in r1 and r2.
+we will put r1 in AR
+we will subtract r2 from AR until it becomes zero or negative
+if it becomes zero, then we will store r2 in r5, and end the program
+if it is negative, then we will add r2 to it once, store this value in r3
+then, we will shift r2's value into r1 and after that r3's value into r2.
+and then we will do it again, until we get a zero.
+
+question 3
+
+for this one, we will be using bubble sort
+we will store n in r0
+and n-1 in r1
+we will have two counters, 
+whenever one counter goes from 0 to n-1,we will reset it and increase the value of the second counter
+the second counter will go from 0 to n;
+once the second counter increments unto n+1, we will end the program.
+the first counter will be used to keep track of which elements in the sequence we are comparing.we will the compare the ith and the (i+!)th elements where i is the value of the first counter.
+this algorithm is called bubble sort
+whenever we compare two values, we will see if the first one is greater than the second one. if it is, then we will put the second value in the memory address of the first one, and the first ones value in the memory address of the second one.
+this is equivalent to 'swapping' them in the memory if the greater one comes before the smaller one.
+we know that the order of bubble sort is n^2, that is why we made two counters.
+

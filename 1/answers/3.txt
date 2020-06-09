@@ -1,0 +1,71 @@
+movi r0
+190
+movs r0
+load r1
+movi r2
+0
+movs r1
+subi 1
+movd r3
+movd r4
+
+
+
+loop2goeson:
+movi r2
+0
+
+
+dontendloop1:
+movi r0 
+200
+movs r0
+add r2
+load r4
+adi 1
+load r5
+movs r4
+sub r5
+jmpdp
+noswitch
+jmpdp
+switch
+switch:
+movs r0
+add r2
+store r5
+adi 1
+store r4
+
+
+
+noswitch:
+movs r2
+adi 1
+movd r2
+subi 1
+sub r3
+jmpdm
+endloop1
+jmpdp
+dontendloop1
+
+endloop1:
+movs r1
+subi 1
+movd r1
+jmpdm
+loop2goeson
+jmpdp
+loop2stops
+
+
+
+
+
+loop2stops:
+stop 
+stop
+stop
+stop
+stop

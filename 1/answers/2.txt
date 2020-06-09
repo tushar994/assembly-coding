@@ -1,0 +1,37 @@
+movi r0
+100
+movs r0
+load r1
+movi r0
+110
+movs r0
+load r2
+subtract1:
+movs r1
+subtract:
+sub r2
+jmpdz
+finally
+jmpdm
+subtract 
+jmpdp
+ifneg
+
+ifneg:
+add r2
+movd r3
+movs r2
+movd r1
+movs r3
+movd r2
+jmpdu
+subtract1
+
+
+
+finally:
+movs r2
+movd r5
+stop
+stop
+stop
